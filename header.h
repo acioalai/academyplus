@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/03 18:17:39 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/03 18:48:36 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+
 size_t	ft_strlen(const char *str);
 char	*ft_strcpy(char *str1, const char *str2);
 char	*ft_strncpy(char *str1, char *str2, size_t n);
@@ -40,5 +41,9 @@ int     ft_tolower(int c);
 char    *ft_strdup(const char *s1);
 void    *ft_memmove(void *dst, const void *src, size_t len);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
+void    *ft_memchr(const void *s, int c, size_t n);
+
+
+
 
 #endif
