@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/01 16:33:19 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/03 18:17:39 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int     ft_isascii(int c);
 int		ft_toupper(int c);
 int     ft_tolower(int c);
 char    *ft_strdup(const char *s1);
-
+void    *ft_memmove(void *dst, const void *src, size_t len);
+void    *ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
