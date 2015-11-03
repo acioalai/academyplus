@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/03 18:48:36 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/03 19:02:24 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char    *ft_strdup(const char *s1);
 void    *ft_memmove(void *dst, const void *src, size_t len);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
-
+int     ft_memcmp(const void *s1, const void *s, size_t n);
 
 
 
