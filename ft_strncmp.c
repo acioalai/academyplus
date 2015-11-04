@@ -6,21 +6,22 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/01 13:04:52 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/01 13:43:19 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/04 08:01:44 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "header.h"
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	while ((i < n) && (s1 || s2))
 	{
 		if (s1[i] != s2[i])
-			return (s1[i]-s2[i]);
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }

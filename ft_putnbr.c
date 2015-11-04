@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/03 19:00:05 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 07:47:49 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/04 08:15:18 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/04 09:03:01 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int		ft_memcmp(const void *s1, const void *s, size_t n)
+void	ft_putnbr(int nb)
 {
-	size_t i;
-
-	i = 0;
-	while (i < n)
+	if (nb < 0)
 	{
-		if (*((unsigned char *)s1 + i) != *((unsigned char *)s + i))
-			return (*((unsigned char *)s1 + i) - *((unsigned char *)s + i));
-		i++;
+		ft_putchar('-');
+		nb = -nb;
 	}
-	return (0);
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		ft_putchar(nb + '0');
+	}
 }

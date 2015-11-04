@@ -6,9 +6,10 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/01 16:14:04 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/01 17:00:22 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/04 07:57:22 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "header.h"
 
 char	*ft_strdup(const char *s1)

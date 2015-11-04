@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/03 19:00:05 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 07:47:49 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/04 07:20:12 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/04 08:31:42 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "header.h"
 
-int		ft_memcmp(const void *s1, const void *s, size_t n)
+void	*ft_memalloc(size_t size)
 {
-	size_t i;
+	void	*str;
 
-	i = 0;
-	while (i < n)
-	{
-		if (*((unsigned char *)s1 + i) != *((unsigned char *)s + i))
-			return (*((unsigned char *)s1 + i) - *((unsigned char *)s + i));
-		i++;
-	}
-	return (0);
+	if (!(str = (char *)malloc(sizeof(char)) * size + 1) || (!size))
+		return (NULL);
+	ft_memset(str, '\0', size);
+	return((void *)str)
 }

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/03 19:00:05 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 07:47:49 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/04 09:07:52 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int		ft_memcmp(const void *s1, const void *s, size_t n)
+int		main(void)
 {
-	size_t i;
+/*	char *s1,*s2;
 
-	i = 0;
-	while (i < n)
-	{
-		if (*((unsigned char *)s1 + i) != *((unsigned char *)s + i))
-			return (*((unsigned char *)s1 + i) - *((unsigned char *)s + i));
-		i++;
-	}
+	strcpy(s1,"abc");
+	strcpy(s2,"abc");
+	printf("%d", ft_strequ(s1,s2));	
+*/
+	ft_putnbr(2);
+
 	return (0);
 }

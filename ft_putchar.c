@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/03 19:00:05 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 07:47:49 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/04 08:19:26 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/04 08:21:26 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int		ft_memcmp(const void *s1, const void *s, size_t n)
+void	ft_putchar(char c)
 {
-	size_t i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (*((unsigned char *)s1 + i) != *((unsigned char *)s + i))
-			return (*((unsigned char *)s1 + i) - *((unsigned char *)s + i));
-		i++;
-	}
-	return (0);
+	write(1, &c, 1);
 }

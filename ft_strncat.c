@@ -6,23 +6,25 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 18:28:24 by acioalai          #+#    #+#             */
-/*   Updated: 2015/10/25 16:51:55 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/04 08:00:46 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "header.h"
 
-char    *ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int		i,j;
-	
-	i = 0;	
+	int		i;
+	int		j;
+
+	i = 0;
 	j = strlen(s1);
 	while (n > 0)
 	{
-		s1[j+i] = s2[i];
+		s1[j + i] = s2[i];
 		n--;
 		i++;
 	}
-	s1[j+i] = '\0';
+	s1[j + i] = '\0';
 	return (s1);
 }

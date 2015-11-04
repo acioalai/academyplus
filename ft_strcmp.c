@@ -6,9 +6,10 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/01 13:04:52 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/01 13:34:40 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/04 07:56:29 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "header.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
@@ -19,8 +20,8 @@ int		ft_strcmp(const char *s1, const char *s2)
 	while (s1 || s2)
 	{
 		if (s1[i] != s2[i])
-			return (s1[i]-s2[i]);
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }

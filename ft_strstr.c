@@ -6,9 +6,10 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/01 12:19:27 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/01 12:50:08 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/04 08:03:31 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "header.h"
 
 char	*ft_strstr(const char *s1, const char *s2)

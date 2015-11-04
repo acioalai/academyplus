@@ -6,15 +6,15 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 18:03:48 by acioalai          #+#    #+#             */
-/*   Updated: 2015/10/24 18:23:28 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/04 07:54:24 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "header.h"
 
 char	*ft_strcat(char *s1, char *s2)
 {
 	if (s1 && s2)
 		ft_strcpy(&s1[ft_strlen(s1)], s2);
-
 	return (s1);
 }

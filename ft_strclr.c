@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/03 19:00:05 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 07:47:49 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/04 08:23:54 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/04 08:51:51 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int		ft_memcmp(const void *s1, const void *s, size_t n)
+void	ft_strclr(char *s)
 {
-	size_t i;
+	int		i;
 
 	i = 0;
-	while (i < n)
+	while (s[i])
 	{
-		if (*((unsigned char *)s1 + i) != *((unsigned char *)s + i))
-			return (*((unsigned char *)s1 + i) - *((unsigned char *)s + i));
+		s[i] = "\0";
 		i++;
 	}
-	return (0);
 }
