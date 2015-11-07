@@ -6,15 +6,15 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 16:02:10 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 08:08:57 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/07 02:45:10 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
 char	*ft_strncpy(char *str1, char *str2, size_t n)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
 	while ((str2[i] != '\0') && (i < n))

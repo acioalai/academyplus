@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 09:07:52 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/07 01:03:19 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int		main(void)
 	strcpy(s2,"abc");
 	printf("%d", ft_strequ(s1,s2));	
 */
-	ft_putnbr(2);
-
+	void	*str;
+	str = ft_memalloc(88);
+//	ft_strcpy(str, "abcde");
+	printf("%lu", ft_strlen(str));
+	puts(str);
 	return (0);
 }

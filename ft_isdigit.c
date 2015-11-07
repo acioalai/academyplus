@@ -6,13 +6,13 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/01 14:23:47 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 07:46:23 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/07 02:53:51 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
-int		isdigit(int c)
+int		ft_isdigit(int c)
 {
 	if ((c >= 48) && (c <= 57))
 		return (1);

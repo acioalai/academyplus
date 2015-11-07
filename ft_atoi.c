@@ -6,9 +6,11 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/01 15:42:30 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/01 15:49:09 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/07 02:51:06 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_atoi(const char *str)
 {

@@ -6,15 +6,15 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/01 12:48:01 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/01 13:11:47 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/07 02:48:58 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		i;
+	size_t		i;
 	int		j;
 	int		c;
 
