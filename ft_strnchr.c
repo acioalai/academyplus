@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/07 06:08:57 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/07 05:14:36 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/07 05:17:30 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
-int		main(void)
+char	*ft_strnchr(const char *s, int c, size_t n)
 {
-/*	char *s1,*s2;
+	size_t	i;
 
-	strcpy(s1,"abc");
-	strcpy(s2,"abc");
-	printf("%d", ft_strequ(s1,s2));	
-*/
-	void	*str;
-	puts(ft_memchr("abcdef",'a' , 5));
-	
-	puts(memchr("abcdef",'a' , 5));
-/*	
-	char	*s;
-	ft_memmove(s, "acasa", 2);
-	puts(s);	
-	puts(memmove(s, "acasa", 2));
-	return (0);
-*/
+	i = 0;
+	while ((i <= (ft_strlen(s) + 1)) && (i <= n))
+	{
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		else
+			i++;
+	}
+	return (NULL);
 }

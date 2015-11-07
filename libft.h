@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/07 02:25:28 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/07 05:19:41 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ void    *ft_memalloc(size_t size);
 int     ft_atoi(const char *str);
 int     ft_isprint(int c);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+char    *ft_strnchr(const char *s, int c, size_t n);
+
 
 #endif

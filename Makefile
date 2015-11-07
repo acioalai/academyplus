@@ -28,7 +28,8 @@ SOURCES =	ft_memset.c				\
 			ft_atoi.c				\
 			ft_toupper.c			\
 			ft_tolower.c			\
-	
+			ft_strnchr.c			\
+
 HEADERS	= -Iincludes/libft.h
 
 OBJECTS	= $(subst .c,.o,$(SOURCES))
