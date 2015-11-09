@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/07 05:19:41 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/09 08:51:01 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,16 @@ int     ft_atoi(const char *str);
 int     ft_isprint(int c);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 char    *ft_strnchr(const char *s, int c, size_t n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_strclr(char *s);
+void	ft_strdel(char **as);
+char	*ft_strnew(size_t size);
+void	ft_memdel(void **ap);
+void	*ft_memalloc(size_t size);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmap(char const *s, char (*f)(char));
+char    *ft_strsub(char const *s, unsigned int start, size_t len);
 
 
 #endif
