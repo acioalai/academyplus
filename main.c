@@ -6,11 +6,11 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/09 08:40:55 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/09 09:16:16 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
 int		main(void)
 {
@@ -30,7 +30,7 @@ int		main(void)
 	puts(s);	
 	puts(memmove(s, "acasa", 2));
 */
-	printf("%s", ft_strsub("acasa", 3, 2));
+	 puts(ft_strsub("acasa", 2, 3));
 
 	return (0);
 }
