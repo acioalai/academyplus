@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/09 08:21:54 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/10 08:46:44 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/10 07:53:20 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/10 08:37:29 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s)
 {
-	char	*str;
-	int		i;
+	unsigned int	i;
+	unsigned int	k;
+	char			*str;
 
-	if (s == NULL)
-		return(NULL);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (str == NULL)
-		return(NULL);
 	i = 0;
-	while (len--)
-	{
-		str[i] = s[start + i];
+	k = 0;
+	while ((s[i] != '\0') && ((s[i] == ' ') || (s[i] == '\n') || (s[i] == '\t')))
 		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	k = ft_strlen(s) - 1;
+	while ((k > 0) && ((s[k] == ' ') || (s[k] == '\n') || (s[k] == '\t')))
+		k--;
+	if (k != i)
+		str = (char *)malloc(sizeof(char) * (k - i));
+	else
+		return (NULL);
+	return (ft_strsub(s, i, (k - i + 1)));
 }

@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/10 07:47:10 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/10 08:36:56 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,14 @@ int		main(void)
 	ft_memmove(s, "acasa", 2);
 	puts(s);	
 	puts(memmove(s, "acasa", 2));
-*/
-	 puts(ft_strjoin("afara ","este frig"));
+
+	puts(ft_strjoin("afara ","este frig"));
 	printf("\n%zu", ft_strlen(ft_strjoin("afara ","este frig")));
+*/
+	puts("               acasa         ");
+	puts(ft_strtrim("               acasa       i  "));
+
+
+
 	return (0);
 }
