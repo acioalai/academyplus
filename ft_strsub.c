@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/09 08:21:54 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/09 09:25:29 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/10 07:29:24 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 			str[i] = s[i];
 			i++;
 		}
-		//str = ft_strncpy(str, (char *)s[start], len);
+		str = ft_strncpy(str, (char *)s[start], len);
 		str[i] = '\0';
+		puts("capat");
 	}
 	puts(str);
 	return (str);

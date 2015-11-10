@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/10 07:47:10 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/10 07:29:48 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/10 07:47:52 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(void)
-{
-/*	char *s1,*s2;
-
-	strcpy(s1,"abc");
-	strcpy(s2,"abc");
-	printf("%d", ft_strequ(s1,s2));	
-
-	void	*str;
-	puts(ft_memchr("abcdef",'a' , 5));
+char	*ft_strjoin(char const *s1, char const *s2)
+{	
+	size_t	sum;
+	char	*str;
 	
-	puts(memchr("abcdef",'a' , 5));
-	
-	char	*s;
-	ft_memmove(s, "acasa", 2);
-	puts(s);	
-	puts(memmove(s, "acasa", 2));
-*/
-	 puts(ft_strjoin("afara ","este frig"));
-	printf("\n%zu", ft_strlen(ft_strjoin("afara ","este frig")));
-	return (0);
+	sum = ft_strlen(s1)+ft_strlen(s2);
+	str = ft_strnew(sum);
+	ft_strcpy(str, s1);
+	if (!(ft_strcat(str,(char *) s2)))
+		return (NULL);
+	else
+		return(str);
 }
