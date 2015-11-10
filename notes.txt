@@ -1,0 +1,6 @@
+am ramas la strsplit
+strlcat de modificat
+de norminat partea 2
+de facut un main bun
+
+
