@@ -6,7 +6,7 @@
 #    By: mimuresa <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/01 11:14:34 by mimuresa          #+#    #+#              #
-#    Updated: 2015/11/14 18:30:18 by acioalai         ###   ########.fr        #
+#    Updated: 2015/11/14 19:34:34 by acioalai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC = ft_memset.c \
 		ft_memcpy.c \
 		ft_memccpy.c \
 		ft_memmove.c \
+		ft_strnchr.c \
 		ft_memchr.c \
 		ft_memcmp.c \
 		ft_strlen.c \
@@ -72,6 +73,7 @@ OOO = ft_memset.o \
 		ft_memcpy.o \
 		ft_memccpy.o \
 		ft_memmove.o \
+		ft_strnchr.o \
 		ft_memchr.o \
 		ft_memcmp.o \
 		ft_strlen.o \
