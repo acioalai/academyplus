@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 14:25:38 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/14 16:03:01 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ int		main(void)
 	puts(s);
 	matrix = ft_strsplit(s, '*');
 	i = 0;
-	while (matrix[i])
+	
+	while (matrix[i] != '\0')
 	{
+		printf("%d ", i);
 		puts(matrix[i]);
 		i++;
 	}	
-
-
 
 	return (0);
 }
