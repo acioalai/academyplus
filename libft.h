@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 17:14:33 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/14 18:40:17 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,11 @@ char    *ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
-void	ft_putstr_fd(const char *s, int fd);
+void	ft_putstr(const char *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl(char const *s);
+size_t	ft_strlcat_gresit(char *dst, const char *src, size_t size);
 
 #endif

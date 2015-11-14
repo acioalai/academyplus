@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 17:26:29 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/14 18:55:16 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		main(void)
 		puts("               acasa         ");
 		puts(ft_strtrim("               acasa       i  "));
 		*/
-	char	s[100] = "*******a*a*a*******a*****************";
+/*	char	s[100] = "*******a*a*a*******a*****************";
 	char	**matrix;
 	int		i,n;
 
@@ -50,6 +50,16 @@ int		main(void)
 		puts(matrix[i]);
 		i++;
 	}	
-
+*/	
+	int	n;
+	int z;
+	char	test[40] = "ce";
+	char	test2[40] = "ce";
+	n = ft_strlcat(test, "acasa", 7);
+	printf("\n%d\n", n);
+	puts(test);
+	z = strlcat(test2, "acasa", 7);
+	printf("\n%d\n", z);
+	puts(test2);
 	return (0);
 }

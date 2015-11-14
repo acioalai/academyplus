@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/04 08:39:46 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/04 08:45:46 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/14 18:32:51 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	if (ft_strncmp(s1, s2) == 0)
+	if (ft_strncmp(s1, s2, n) == 0)
 		return (1);
 	return (0);
 }
