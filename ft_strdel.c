@@ -6,13 +6,13 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/09 07:36:45 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/09 07:43:28 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/14 17:29:08 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
 	ft_memdel((void**)as);
 }
