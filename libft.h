@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 18:40:17 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/14 19:03:43 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,8 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl(char const *s);
 size_t	ft_strlcat_gresit(char *dst, const char *src, size_t size);
+char	*ft_itoa(int n);
+void	ft_putnbr_fd(int n, int fd);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 
 #endif
