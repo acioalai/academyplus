@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 16:03:01 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/14 17:07:09 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		main(void)
 		puts("               acasa         ");
 		puts(ft_strtrim("               acasa       i  "));
 		*/
-	char	s[100] = "ASD*AD*AS*DA*";
+	char	s[100] = "*********************************";
 	char	**matrix;
 	int		i,n;
 

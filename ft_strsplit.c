@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/10 08:52:13 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 16:29:18 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/14 17:07:23 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ char	**ft_malloc(const char *s,	int nbr)
 	char	**str;
 	int		i;
 	
-	str = (char **)malloc(sizeof(char *) * nbr + 1);
+	str = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
 	i = 0;
 	while (i < nbr)
 	{
-		str[i] = (char *)malloc(sizeof(char) * ft_strlen(s));
+		str[i] = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 		i++;	
 	}
 	return(str);
@@ -71,6 +71,8 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		while ((s[i] == c) && (s[i] != '\0'))
 			i++;
+		if (s[i] != '\0')
+		{
 		matrix[p][k] = s[i];
 		i++;
 		k++;
@@ -80,9 +82,8 @@ char	**ft_strsplit(char const *s, char c)
 			p++;
 			k = 0;
 		}
+		}
 	}
-	i = 0;
-	while (matrix[i])
-		i++;
+	matrix[p] = 0;
 	return(matrix);
 }
