@@ -6,82 +6,46 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/14 15:08:21 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 15:09:03 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/15 05:20:25 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-static	int		ft_nrcifre(int n)
+void	itoa_isnegative(int *n, int *negative)
 {
-	int nr;
-
-	nr = 0;
-	while (n != 0)
+	if (*n < 0)
 	{
-		nr++;
-		n /= 10;
+		*n *= -1;
+		*negative = 1;
 	}
-	return (nr);
 }
 
-static	char	*ft_strrev(char *str)
+char	*ft_itoa(int n)
 {
-	int		counter;
-	int		size_str;
-	char	temp;
-
-	counter = 0;
-	if (str[counter] == '-')
-		counter++;
-	size_str = 0;
-	while (str[size_str])
-		size_str++;
-	size_str -= 1;
-	while (counter < size_str)
-	{
-		temp = str[size_str];
-		str[size_str] = str[counter];
-		str[counter] = temp;
-		counter++;
-		size_str--;
-	}
-	return (str);
-}
-
-static	int		ft_valoarej(int n)
-{
-	if (n < 0)
-		return (ft_nrcifre(n) + 2);
-	return (ft_nrcifre(n) + 1);
-}
-
-char			*ft_itoa(int n)
-{
+	int		tmpn;
+	int		len;
+	int		negative;
 	char	*str;
-	int		i;
-	int		j;
 
-	i = 0;
-	if (n == 0)
-		return ("0\0");
-	if (n < 0)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	tmpn = n;
+	len = 2;
+	negative = 0;
+	itoa_isnegative(&n, &negative);
+	while (tmpn /= 10)
+		len++;
+	len += negative;
+	if ((str = (char*)malloc(sizeof(char) * len)) == NULL)
+		return (NULL);
+	str[--len] = '\0';
+	while (len--)
 	{
-		str = (char*)malloc(sizeof(str) * ft_nrcifre(n) + 2);
-		str[i++] = '-';
-	}
-	else
-		str = (char*)malloc(sizeof(str) * ft_nrcifre(n) + 1);
-	j = ft_valoarej(n);
-	str[j] = '\0';
-	while (i < j && n != 0)
-	{
-		str[i] = n % 10 + '0';
-		if (n < 0)
-			str[i] = -(n % 10) + '0';
+		str[len] = n % 10 + '0';
 		n = n / 10;
-		i++;
 	}
-	return (ft_strrev(str));
+	if (negative)
+		str[0] = '-';
+	return (str);
 }

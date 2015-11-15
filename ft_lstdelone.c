@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/24 18:03:48 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/15 05:14:51 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/15 04:14:11 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/15 05:28:52 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+void ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	if (s1 && s2)
-		ft_strcpy(&s1[ft_strlen(s1)], s2);
-	return (s1);
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
 }
