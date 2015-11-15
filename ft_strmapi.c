@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/09 08:16:54 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 18:32:18 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/15 03:52:13 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	str[i] = '\0';
-	return(str);
+	return (str);
 }

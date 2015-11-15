@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/04 07:29:17 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 23:35:20 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/15 03:22:09 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,31 +25,46 @@ int		main(void)
 
 		puts(memchr("abcdef",'a' , 5));
 
-		char	*s;
-		ft_memmove(s, "acasa", 2);
+		char	s[] = "abcdef";
+		char	s1[] = "abcdef";
+		ft_memmove(s + 1, "abcdef", 5);
 		puts(s);	
-		puts(memmove(s, "acasa", 2));
+		puts(memmove(s1 + 1, "abcdef", 5));
 
-		puts(ft_strjoin("afara ","este frig"));
+		puts(ft_strjoin("afara ","este frig"))
+		q
 		printf("\n%zu", ft_strlen(ft_strjoin("afara ","este frig")));
 
 		puts("               acasa         ");
 		puts(ft_strtrim("               acasa       i  "));
-		*/
-	/*	char	s[100] = "*******a*a*a*******a*****************";
+*/		char	s[100] = "**a********matai";
 		char	**matrix;
 		int		i,n;
 
 		puts(s);
 		matrix = ft_strsplit(s, '*');
 		i = 0;
-
+		
 		while (matrix[i] != '\0')
 		{
-		printf("%d ", i);
-		puts(matrix[i]);
-		i++;
-		}	
+			printf("%d ", i);
+			printf("%s",matrix[i]);
+			i++;
+		}
+
+			printf("%s",matrix[i]);
+		printf("\n	%d	\n", i);
+/*		
+		char **tt;
+
+		int	 temp;
+
+		tt = ft_strsplit("*coucou", '*');
+		puts(*tt);
+		temp = strcmp(tt[0], "coucou");
+		printf("%d", temp);
+
+
 
 		int	n;
 		int z;
@@ -61,10 +76,20 @@ int		main(void)
 		z = strlcat(test2, "acasa", 7);
 		printf("\n%d\n", z);
 		puts(test2);
-		*/
-	puts(ft_strsub("je serai", 8, 8)); 
-	puts("je serai");
+		
+//	puts(ft_strsub("je serai", 8, 8)); 
+//	puts("je serai");
 
+	char buf[7];
+	int		i;
+	i = 0;
+	memset(buf, 33, 6);
+	strncpy(buf, "abc", 6);
+ while (i < 6)	
+ {	write(1, &buf[i],1);
+	i++; 
+ }
+*/
 	return (0);
 }
 /*

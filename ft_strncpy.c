@@ -6,22 +6,22 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 16:02:10 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/07 02:45:10 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/15 03:30:01 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *str1, char *str2, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	size_t		i;
 
 	i = 0;
-	while ((str2[i] != '\0') && (i < n))
+	ft_memset(dst, '\0', n);
+	while ((src[i] != '\0') && (i < n))
 	{
-		str1[i] = str2[i];
+		dst[i] = src[i];
 		i++;
 	}
-	str1[i] = '\0';
-	return (str1);
+	return (dst);
 }

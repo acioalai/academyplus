@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 19:03:43 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/15 03:29:23 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 size_t	ft_strlen(const char *str);
 char	*ft_strcpy(char *str1, const char *str2);
-char	*ft_strncpy(char *str1, char *str2, size_t n);
+char	*ft_strncpy(char *dst, const char *src, size_t n);
 char	*ft_strcat(char *s1, char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);

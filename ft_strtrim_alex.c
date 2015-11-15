@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/09 08:21:54 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/15 03:56:24 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/10 07:53:20 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/15 03:44:33 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s)
 {
 	unsigned int	i;
+	unsigned int	k;
 	char			*str;
-	size_t			slen;
+	//char			*str_null;
 
-	if (s == NULL)
-		return (NULL);
-	str = (char *)malloc((len + 1) * sizeof(char));
-	slen = ft_strlen(s);
+	//str_null = "" 	
 	i = 0;
-	if ((start <= slen) && (len <= (slen - start)))
-	{
-		while (len > 0)
-		{
-			str[i] = s[start + i];
-			i++;
-			len--;
-		}
-		str[i] = '\0';
-	}
+	k = 0;
+	while ((s[i] != '\0') && ((s[i] == ' ')
+				|| (s[i] == '\n') || (s[i] == '\t')))
+		i++;
+	if (i == (ft_strlen(s) - 1))
+		return (NULL);
+	k = ft_strlen(s) - 1;
+	while ((k > 0) && ((s[k] == ' ') || (s[k] == '\n') || (s[k] == '\t')))
+		k--;
+	if (k <= i)
+		str = (char *)malloc(sizeof(char) * (k - i));
 	else
 		return (NULL);
-	return (str);
+	return (ft_strsub(s, i, (k - i + 1)));
 }

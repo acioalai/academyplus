@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/09 07:31:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 22:53:38 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/15 03:50:50 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnew(size_t size)
 	char	*str;
 	int		i;
 
-	i = 0;	
+	i = 0;
 	if ((!(str = (char *)malloc(sizeof(char) * size))))
 		return (NULL);
 	str[size + 1] = '\0';
@@ -27,5 +27,4 @@ char	*ft_strnew(size_t size)
 		i++;
 	}
 	return ((void *)str);
-
 }

@@ -5,90 +5,84 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/10 08:52:13 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/14 17:26:49 by acioalai         ###   ########.fr       */
+/*   Created: 2015/11/15 03:26:55 by acioalai          #+#    #+#             */
+/*   Updated: 2015/11/15 03:28:10 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_words_nbr(const char *s, char c)
+size_t	ft_wordsize(char const *s, char c)
 {
-	int		nbr;
-	int		i;
-	int		k;
+	size_t	size;
 
-	nbr = 0;
-	i = 0;
-	while (s[i] != '\0')
+	size = 0;
+	while (*s != '\0' && *s != c)
 	{
-		while ((s[i] != '\0') && (s[i] == c))
-			i++;
-		k = 0;
-		while ((s[i] != '\0') && (s[i] != c))
-		{
-			i++;
-			k++;
-		}
-		if (k != 0)
-			nbr++;
+		s++;
+		size++;
 	}
-	return (nbr);
+	return (size);
 }
 
-char	**ft_put_matrix(char **matrix, const char *s, char c)
+size_t	ft_countwords(char const *s, char c)
 {
-	int		p;
-	int		k;
-	int		i;
+	size_t	count;
 
-	p = 0;
-	k = 0;
-	i = 0;
-	while (s[i] != '\0')
+	count = 0;
+	while (*s != '\0')
 	{
-		while ((s[i] == c) && (s[i] != '\0'))
-			i++;
-		if (s[i] != '\0')
-		{
-			matrix[p][k] = s[i++];
-			k++;
-			if (s[i] == c)
-			{
-				matrix[p][k] = '\0';
-				p++;
-				k = 0;
-			}
-		}
+		if (*s != c && (*(s + 1) == c || *(s + 1) == '\0'))
+			count++;
+		s++;
 	}
-	matrix[p] = 0;
-	return (matrix);
-}
-
-char	**ft_malloc(const char *s, int nbr)
-{
-	char	**str;
-	int		i;
-
-	str = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
-	i = 0;
-	while (i < nbr)
-	{
-		str[i] = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-		i++;
-	}
-	return (str);
+	return (count);
 }
 
 char	**ft_strsplit(char const *s, char c)
 {
-	char	**matrix;
-	int		word_nbr;
+	char	**ptr;
+	size_t	nb_words;
+	size_t	i;
+	size_t	word_size;
 
-	if (s == NULL)
+	nb_words = ft_countwords(s, c);
+	ptr = malloc((nb_words + 1) * sizeof(*ptr));
+	if (ptr == NULL)
 		return (NULL);
-	word_nbr = ft_words_nbr(s, c);
-	printf("%d", word_nbr);
-	matrix = ft_malloc(s, word_nbr);
-	return (ft_put_matrix(matrix, s, c));
+	i = 0;
+	while (i < nb_words && *s != '\0')
+	{
+		while (*s == c)
+			s++;
+		word_size = ft_wordsize(s, c);
+		ptr[i] = malloc((word_size + 1) * sizeof(**ptr));
+		if (ptr[i] == NULL)
+			return (NULL);
+		ft_strncpy(ptr[i], s, word_size);
+		ptr[i][word_size] = '\0';
+		s += word_size;
+		i++;
+	}
+	ptr[i] = NULL;
+	return (ptr);
+}
+
+char	**ft_strsplit_once(char const *s, char c)
+{
+	char	*at;
+	size_t	at_index;
+	char	**tab;
+
+	tab = NULL;
+	if ((at = ft_strchr(s, c)))
+	{
+		if (!(tab = ft_memalloc(sizeof(char *) * (2 + 1))))
+			return (NULL);
+		at_index = at - s;
+		tab[0] = ft_strsub(s, 0, at_index);
+		tab[1] = ft_strsub(s, at_index + 1, ft_strlen(s) - (at_index + 1));
+		tab[2] = NULL;
+	}
+	return (tab);
 }
