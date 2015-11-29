@@ -6,14 +6,13 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/24 13:04:12 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/15 05:16:08 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/21 08:49:13 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>

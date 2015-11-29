@@ -6,7 +6,7 @@
 /*   By: acioalai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/15 03:26:55 by acioalai          #+#    #+#             */
-/*   Updated: 2015/11/15 05:27:25 by acioalai         ###   ########.fr       */
+/*   Updated: 2015/11/21 09:42:09 by acioalai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char			**ft_strsplit(char const *s, char c)
 	j = 0;
 	tab = NULL;
 	if (s)
-		tab = (char **) malloc(sizeof(char *) * (count_w(s, c) + 1));
+		tab = (char **)malloc(sizeof(char *) * (count_w(s, c) + 1));
 	if (tab)
 	{
 		while (j < count_w(s, c))
